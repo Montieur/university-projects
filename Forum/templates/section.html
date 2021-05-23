@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+{{ section.name }}
+{% endblock %}
+
+{% block 'additionalcss'%}
+
+<style>
+    .sections {
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px black solid;
+        width: 80%;
+
+    }
+
+    .sectionsHeader {
+        display: grid;
+        min-height: 3vh;
+        grid-template-columns: 70% 30%;
+
+    }
+
+    .section {
+        display: grid;
+        min-height: 5vh;
+        grid-template-columns: 70% 30%;
+
+    }
+
+    .section p {
+        padding-left: 5%;
+        text-align: left;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        margin: 0;
+        padding-top: auto;
+        padding-bottom: auto;
+        height: 100%;
+        font-size: 1.1em;
+        border: 1px black solid;
+    }
+
+    .sectionsHeader p {
+        font-size: 1.2em;
+        color: white;
+        background-color: black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+        padding-top: auto;
+        padding-bottom: auto;
+        height: 100%;
+
+        border: 1px white solid;
+    }
+
+    .section a {
+        text-decoration: none;
+    }
+
+    .section a:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .sectionTitle {
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+    .sectionTitle h2 {
+        margin-bottom: 0;
+    }
+
+    .sectionTitle h4 {
+        font-weight: 100;
+        margin: 0;
+    }
+
+    .bigPlus {
+        font-size: 2.5em;
+    }
+
+    .makeThread {
+        margin-left: 20vh;
+        
+    }
+
+    .makeThread a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+    }
+
+
+    .makeThread p {
+        height: 100%;
+        text-align: center;
+        align-self: center;
+        margin: 5px;
+    }
+
+</style>
+
+{% endblock %}
+
+{% block 'siteContent' %}
+
+<div class="sectionTitle">
+    <h2>{{section.name}}</h2>
+    <h4>{{section.description}}</h4>
+</div>
+<div class="sections">
+    <div class="sectionsHeader">
+        <p><b><i>TEMAT</i></b></p>
+        <p><b><i>AUTOR</i></b></p>
+    </div>
+
+    {% for thread in threads %}
+
+    <div class="section">
+        <a href="{% url 'threadpage' section.name thread.id %}"><p><i><b>{{ thread.title }} </b></i></p></a>
+        <p><b><i>{{ thread.author }}</i></b></p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% if user.is_authenticated %}
+
+    <div class="makeThread">
+        <a href="{% url 'newthread' section.name %}">
+            <p class="bigPlus">+</p><p>załóż nowy temat</p>
+        </a>
+    </div>
+
+{% endif %}
+
+
+{% endblock %}

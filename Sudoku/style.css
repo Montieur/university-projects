@@ -1,0 +1,149 @@
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+nav {
+    background-color: rgb(102, 27, 27);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+a:visited {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+a:hover {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: yellow;
+    color: rgb(102, 27, 27);
+    border: 1px solid rgb(102, 27, 27);    
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    color: antiquewhite;
+    display: block;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(102, 27, 27);
+}
+
+h4 {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(102, 27, 27);
+}
+
+
+
+label {
+    font-size: 1.1em;
+    color: antiquewhite;
+    padding: 5px;
+}
+
+select {
+    font-size: 1em;
+    background-color: antiquewhite;
+    color: rgb(102, 27, 27);
+    padding: 5px;
+    height: 50%;
+}
+
+
+table {
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid rgb(102, 27, 27);
+    border-collapse: collapse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.numbar {
+    border-top: 4px solid rgb(102, 27, 27);
+    border-bottom: 4px solid rgb(102, 27, 27);
+}
+
+.hborder {
+    border-top: 4px solid rgb(102, 27, 27);
+}
+
+.vborder {
+    border-right: 4px solid rgb(102, 27, 27);
+}
+
+td {
+    font-size: 1.7em;
+    text-align: center;
+    border: 1px solid rgb(102, 27, 27);
+    color: rgb(102, 27, 27);
+    width: 45px;
+    height: 45px;   
+}
+
+.option {
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    background-color:  rgb(102, 27, 27);
+    color: antiquewhite;
+    border-bottom: solid 1px antiquewhite;
+    font-size: 1.4em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+}
+
+.num {
+    border: 0px;
+    background-color:  rgb(102, 27, 27);
+    color: antiquewhite;
+    border-bottom: solid 2px antiquewhite;
+    padding: 0;
+}
+
+.unselectedCell:hover {
+    background-color: lightgray;
+}
+
+.selectedCell {
+    background-color: lightsalmon;
+}
+
+.staticCell {
+    font-weight: bolder;
+}

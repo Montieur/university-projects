@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        {% block 'title' %}
+        {% endblock %}
+    </title>
+    <style>
+        body {
+            margin: 0;
+            background-color: antiquewhite;
+            /* color: white; */
+        }
+        .mainBody {
+            width: 100%;
+        }
+
+        .topbar {
+            background-color: darkgreen;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            min-height: 10vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-family: monospace;
+            font-size: 3em;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navbar {
+            font-size: 2em;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            font-family: monospace;
+        }
+
+        .navbar a {
+            height: 100%;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            background-color: antiquewhite;
+            color: green
+        }
+
+
+        .content {
+            background-color: antiquewhite;
+            width: 100%;
+            min-height: 60vh;
+        }
+        
+    </style>
+    {% block 'additionalCSS' %}
+    {% endblock %}
+    
+</head>
+<body>
+    <div class="mainBody">
+        <div class="topbar">
+            <div class="logo">
+                <h1>szrotex.pl</h1>
+            </div>
+            <div class="navbar">
+                <a href="/">Lista ogłoszeń</a>
+                <a href="add.html">Dodaj ogłoszenie</a>
+            </div>
+            
+        </div>
+        
+        <div class="content">
+            {% block 'siteContent' %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+muzykowo - masno ni
+{% endblock %}
+
+{% block 'additionalcss'%}
+<style>
+    .message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+</style>
+{% endblock %}
+
+{% block 'siteContent' %}
+<div class="message"><h4>Rejestracja zakończona powodzeniem!</h4>
+    <a href="{% url 'login' %}">Teraz możesz się zalogować.</a>
+</div>
+{% endblock %}

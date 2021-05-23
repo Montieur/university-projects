@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+Ogłoszenie - szrotex.pl
+{% endblock %}
+
+{% block 'additionalCSS' %}
+<style>
+    .newAdvert {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5vh;
+    }
+    .adForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .adForm input {
+        margin-bottom: 1vh;
+    }
+    .adForm textarea {
+        margin-bottom: 1vh;
+    }
+</style>
+
+{% endblock %}
+
+{% block 'siteContent' %}
+
+<div class="newAdvert">
+
+    <form class="adForm" action = "{% url 'homepage' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Dodaj ogłoszenie">
+    </form>
+
+</div>
+
+{% endblock %}

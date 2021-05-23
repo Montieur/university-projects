@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+Ogłoszenie - szrotek.pl
+{% endblock %}
+
+{% block 'additionalCSS' %}
+<style>
+    .properties {
+        display: flex;
+        width: 100%;
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+
+    }
+    table {
+        max-width: 60%;
+        font-size: 2em;
+    }
+    td {
+        border: 1px black solid;
+        padding: 5px;
+        text-align: center;
+    }
+    td:first-of-type  {
+        background-color: darkgreen;
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block 'siteContent' %}
+
+<div class="properties">
+
+    <table>
+        <tr>
+            <td>Marka</td>
+            <td>{{ advert.brandName }}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>{{ advert.modelName }}</td>
+        </tr>
+        <tr>
+            <td>Rok produkcji</td>
+            <td>{{ advert.yearOfProduction }}</td>
+        </tr>
+        <tr>
+            <td>Przebieg</td>
+            <td>{{ advert.mileage }} km</td>
+        </tr>
+        <tr>
+            <td>Opis</td>
+            <td>{{ advert.description }}</td>
+        </tr>
+        <tr>
+            <td>Cena</td>
+            <td>{{ advert.price }} zł</td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td>{{ advert.phone }}</td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td>{{ advert.mail }}</td>
+        </tr>
+
+    </table>
+
+</div>
+
+{% endblock %}

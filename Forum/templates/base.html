@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block 'title' %}
+            {% endblock %}
+        </title>
+        <style>
+
+            a {
+                color: black;
+            }
+
+            .topbar {
+                display: grid;
+                grid-template-columns: 30% 40% 30%;
+                font-size: 1.5em;
+            }
+
+            .logotype {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                grid-column-start: 2;
+                text-align: center;
+            }
+
+            .userlogin {
+                text-align: right;
+                grid-column-start: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .userlogin h5 {
+                margin: 0;
+            }
+        </style>
+        {% block 'additionalcss' %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="topbar">
+            <a class="logotype" href="/"><h1 class="logotype">muzykowo</h1></a>
+            <div class="userlogin">
+                {% if user.is_authenticated %}
+                <h5>Zalogowano jako {{ user.username }}</h5>
+                {% if user.groups.all.0.name == "Mods" %}
+                <a href="{% url 'admin:index' %}">
+                    <h5>Panel administratora</h5>
+                </a>
+                {% endif %}
+                <a href="{% url 'logout' %}">
+                    <h5>Wyloguj się</h5>
+                </a>
+                {% else %}
+                <h5>Nie jesteś zalogowany</h5>
+                <a href="{% url 'login' %}">
+                    <h5>Zaloguj się</h5>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+        {% block 'siteContent' %}
+        {% endblock %}
+    </body>
+</html>

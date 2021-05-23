@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}
+muzykowo
+{% endblock %}
+
+{% block 'additionalcss'%}
+
+<style>
+    .sections {
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px black solid;
+        width: 80%;
+
+    }
+
+    .sectionsHeader {
+        display: grid;
+        min-height: 3vh;
+        
+
+    }
+
+    .section {
+        display: grid;
+        min-height: 5vh;
+        
+
+    }
+
+    .section p {
+        padding-left: 5%;
+        text-align: left;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        margin: 0;
+        padding-top: auto;
+        padding-bottom: auto;
+        height: 100%;
+        font-size: 1.1em;
+        border: 1px black solid;
+    }
+
+    .sectionsHeader p {
+        font-size: 1.2em;
+        color: white;
+        background-color: black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+        padding-top: auto;
+        padding-bottom: auto;
+        height: 100%;
+
+        border: 1px white solid;
+    }
+
+    .section a {
+        text-decoration: none;
+    }
+
+    .section a:hover{
+        background-color:  black;
+        color: white;
+        border: 1px solid white;
+    }
+
+</style>
+
+{% endblock %}
+
+{% block 'siteContent' %}
+
+<div class="sections">
+    <div class="sectionsHeader">
+        <p><b><i>DZIAŁ</i></b></p>
+    </div>
+
+    {% for section in sections %}
+
+    <div class="section">
+        <a href="{% url 'sectionpage' section.name %}"><p><i><b>{{section.name}} </b> // {{section.description}} </i></p></a>
+
+    </div>
+
+
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

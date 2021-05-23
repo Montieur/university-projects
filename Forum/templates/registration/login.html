@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+muzykowo - zaloguj
+{% endblock %}
+
+{% block 'additionalcss'%}
+
+<style>
+    .loginForm {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vh;
+        font-size: 1.5em;
+        padding-top: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        flex-direction: column;
+    }
+
+    .loginForm > form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginForm input {
+        
+        margin: 1vh;
+        font-size: 1em;
+    }
+
+    .loginBtn {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+</style>
+
+
+
+{% endblock %}
+
+{% block 'siteContent' %}
+
+
+
+<div class="loginForm">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Nazwa użytkownika</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>Hasło</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+        <input class="loginBtn" type="submit" value="Zaloguj">
+    </form>
+    <div class="regLink">
+        <p>Nie masz jeszcze konta? <a href="{% url 'registration' %}">Zarejestruj się!</a></p>
+
+    </div>
+</div>
+    
+{% endblock %}

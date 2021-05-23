@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block 'title' %}
+{{ thread.title }} - muzykowo
+{% endblock %}
+
+{% block 'additionalcss'%}
+<style>
+
+    .title {
+        text-align: center;
+    }
+
+    .replies {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .thread {
+        border: 4px solid black;
+        font-size: 1.2em;
+        width: 80%;
+        padding: 0 10px;
+        margin-bottom: 5px;
+        word-wrap: break-word;
+    }
+
+    .reply {
+        width: 80%;
+        border: 2px black solid;
+        padding: 0 10px;
+        margin-bottom: 5px;
+        word-wrap: break-word;
+    }
+
+    .signature {
+        text-align: right;
+        font-style: italic;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block 'siteContent' %}
+
+<div class="title">
+    <h1>temat: {{thread.title}}</h1>
+
+</div>
+
+<div class="replies">
+
+    <div class="thread">
+        <p>{{ thread.content }}</p>
+
+        <p class="signature">
+            {% if thread.author == user %}
+            <a href="{% url 'editthread' thread.id %}"><span>[Edytuj]</span></a>
+            {% endif %}
+            napisano przez {{ thread.author }}
+        </p>
+    </div>
+
+    {% for reply in replies %}
+
+    <div class="reply">
+        <p>{{ reply.content }}</p>
+
+        <p class="signature">
+            {% if reply.author == user %}
+            <a href="{% url 'editreply' reply.id %}"><span>[Edytuj]</span></a>
+            {% endif %}
+            napisano przez {{ reply.author }}
+        </p>
+    </div>
+
+    {% endfor %}
+
+    <div class="addComment">
+        {% if replyform %}
+        <form action="{% url 'threadpage' section.name thread.id %}" method="POST">
+            {% csrf_token %}
+            <table>
+                <td>{{replyform.content}}</td>
+            </table>
+            <input type="submit" value="dodaj komentarz">
+        </form>
+        {% else %}
+        Zaloguj się aby dodać komentarz.
+        {% endif %}
+    </div>
+    
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block 'additionalcss'%}
+
+<style>
+    .threadForm {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vh;
+        font-size: 1.5em;
+        padding-top: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        flex-direction: column;
+    }
+
+    .threadForm > form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .threadForm input {
+        margin: 1vh;
+        font-size: 1em;
+    }
+
+    .loginBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    .invalidData {
+        color: red;
+    }
+
+</style>
+
+{% endblock %}
+
+{% block 'siteContent' %}
+    {% if form %}
+    <div class="threadForm">
+        <form action="{% url 'editreply' reply.id %}" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td>Treść komentarza</td>
+                <td>{{ form.content }}</td>
+            </tr>
+            <input type="submit" value="Edytuj">
+        </form>
+    </div>
+    {% else %}
+    Zaloguj się aby dodać komentarz.
+    {% endif %}
+{% endblock %}

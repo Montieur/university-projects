@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintFlipper", "PaintFlipper.csproj", "{FFA31177-FB9D-419C-991B-D6CC8C8C1B12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFA31177-FB9D-419C-991B-D6CC8C8C1B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA31177-FB9D-419C-991B-D6CC8C8C1B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA31177-FB9D-419C-991B-D6CC8C8C1B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA31177-FB9D-419C-991B-D6CC8C8C1B12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {436C02D0-745C-478B-80AF-9FDE3691007A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blenderv2", "Blenderv2.csproj", "{B87C7D2F-CA51-4645-A281-61B17F300437}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B87C7D2F-CA51-4645-A281-61B17F300437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87C7D2F-CA51-4645-A281-61B17F300437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87C7D2F-CA51-4645-A281-61B17F300437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87C7D2F-CA51-4645-A281-61B17F300437}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5EB6987-9B06-46BD-816F-F6DB6E2300D7}
+	EndGlobalSection
+EndGlobal

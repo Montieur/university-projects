@@ -1,0 +1,102 @@
+<!-- 
+    Albert Przytuła / nr indeksu 8991 
+        Projekt końcowy - Sudoku
+                                    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>すうどく</title>
+    <script src="script.js?ver=1.7.208"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    
+    
+    <nav style="display: flex;">
+        
+        <h1 style="width: 25%;">Sudoku</h1>
+        <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 25%; text-align: center;">
+                <a href="javascript:generateGrid();"  class="fill center" style="padding: 10px; font-weight: bold; font-size: x-large;">Nowa gra</a>
+            </div>
+            
+        </div>
+
+        
+            
+        <div style="width: 25%; text-align: right; padding-right: 20px;">
+            <label for="difficulty">Poziom trudności</label>
+            <select name="difficulty" id="difficultySelect">
+                <option value="easy">Łatwy</option>
+                <option value="normal">Średni</option>
+                <option value="hard">Trudny</option>
+                <option value="expert">Piekielnie trudny</option>
+            </select>
+        </div>
+    
+    </nav>
+
+    
+
+    <div id="trzytabelki" style="display: flex; margin-top: 20px;">
+
+        <div style="width: 25%;" id="numBarArea">
+        </div>
+
+        <div style="width: 50%" id="gameArea">
+        </div>
+
+        <div style="width: 25%; display: flex; align-items: center;">
+
+            <div class="przyciski">
+                <h1 style="color: rgb(102, 27, 27);">00:00:00</h1>
+                <div class="option">
+                    <a class="center fill" href="javascript:unsetNumber();"><h2>Usuń</h2></a>
+                </div>
+                <div class="option">
+                    <a class="center fill" href="javascript:hint();"><h2>Podpowiedź</h2></a>
+                </div>
+                <div class="option">
+                    <a class="center fill" href="#"><h2>Sprawdź błędy</h2></a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    
+
+
+    <h4>Kliknij kratkę, którą chcesz uzupełnić, a następnie wybierz cyfrę na pasku po lewej!</h4>
+
+
+    
+    
+    <script>
+
+        
+        
+        setNumBar();
+        setGameTable();
+        //generateGrid();
+        //fillGameTable();
+        
+    </script>
+
+
+
+
+
+</body>
+</html>
