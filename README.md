@@ -2,9 +2,6 @@
 
 ### This is where you can check out most of my projects I made for my university courses. Most, because I didn't want to litter this repo with some introductory or completely trivial tasks. I also didn't mention any of my group projects in here, stealing credit for my colleagues' work doesn't really feel right.
 
-
-##### also work on repo not finished, I still have to submit at least two more projects, will update when they're done
-
 <br>
 
 ### Here are short summaries of my projects (in alphabetical order): 
