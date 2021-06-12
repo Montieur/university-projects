@@ -32,7 +32,7 @@ Simple audio file player, supports saving playlists, I'm happy with how the UI c
 <br>
 
 ## Checkers
-#### Made with: C# / .NET
+##### Made with: C# / .NET
 My latest project, a game of checkers. Probably the best thing to look at if you want to judge me based on my code-writing habits.
 
 ## Familiada
