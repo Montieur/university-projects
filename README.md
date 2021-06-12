@@ -31,6 +31,10 @@ My most advanced project so far. This app offers a few simple audio file editing
 Simple audio file player, supports saving playlists, I'm happy with how the UI came out.
 <br>
 
+## Checkers
+#### Made with: C# / .NET
+My latest project, a game of checkers. Probably the best thing to look at if you want to judge me based on my code-writing habits.
+
 ## Familiada
 ##### Made with: Java
 One of my first projects. It's basically a Familiada (Polish Family Feud equivalent) simulator. It wasn't meant for uni, but rather for my brother's wedding! I think it's too small to be in it's own repo, but I was really proud of it back then, so I just HAD to put it somewhere. Unfortunately, questions and answers are hard-coded (as I said, one of my firsts (-_-') ), but I have plans to write it again so more people could enjoy this cool thing!
