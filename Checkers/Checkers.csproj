@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\blank_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="blank_icon.ico" />
+    <None Remove="Resources\human.png" />
+    <None Remove="Resources\not_ok.png" />
+    <None Remove="Resources\ok.png" />
+    <None Remove="Resources\robot.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\blank_icon.ico" />
+    <Resource Include="Resources\human.png" />
+    <Resource Include="Resources\not_ok.png" />
+    <Resource Include="Resources\ok.png" />
+    <Resource Include="Resources\robot.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

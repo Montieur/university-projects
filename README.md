@@ -24,8 +24,6 @@ My most advanced project so far. This app offers a few simple audio file editing
 - fading in (from silence to full volume)
 - volume change
 - delaying the track (makes the track start playing at a given point in time)
-
-
 <br>
 
 ## Audio player
